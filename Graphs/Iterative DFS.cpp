@@ -12,6 +12,8 @@ fill(visited,visited+N, 0);
 visited[0]=1;
 int k=s.top();
 int c;
+while(!s.empty())
+{
 for(int i=0; i<g[k].size(); i++)
 {
 c=0;
@@ -24,6 +26,7 @@ c=0;
   }
 if(c==0)
 s.pop();
+}
 }
 return res;
 }
@@ -39,5 +42,4 @@ cin>>t1>>t2;
 g[t2].push_back(t1);
 g[t1].push_back(t2);
 }
-
 }
